@@ -10,6 +10,6 @@ table {
     color: #c4ba2c;
 }
 
-delete > i {
+.delete > i {
     color: #b9505b;
 }
