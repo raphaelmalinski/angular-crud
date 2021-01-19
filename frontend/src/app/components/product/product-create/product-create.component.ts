@@ -1,4 +1,4 @@
-import { Product } from './products.model';
+import { Product } from './../products.model';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -10,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class ProductCreateComponent implements OnInit {
 
-  product: Product = {};
+  product: Product = {
+    name: '',
+    price: null
+  }
 
   constructor(private productService: ProductService,
               private router : Router) { }

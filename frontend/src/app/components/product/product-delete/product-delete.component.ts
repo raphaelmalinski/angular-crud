@@ -1,7 +1,8 @@
+import { Product } from './../products.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product-create/products.model';
+
 
 @Component({
   selector: 'app-product-delete',
@@ -17,7 +18,7 @@ export class ProductDeleteComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('id');
     this.productService.readById(id).subscribe(product => {
       this.product = product;
     });
